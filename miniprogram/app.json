@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/owner/owner",
+    "pages/user/user"
+  ],
+  "window": {
+    "backgroundColor": "#000",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000671",
+    "navigationBarTitleText": "实名乘车管理系统",
+    "navigationBarTextStyle": "white"
+    
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

@@ -3,8 +3,8 @@
   <view class="userinfo">
     <view class="btn_box">
       <view class="img_box">
-        <image class="box_bg" src="../../images/box_bg.png"></image>
-        <image class="box_img" src="../../images/car.png"></image>
+        <!-- <image class="box_bg" src="../../images/box_bg.png"></image>
+        <image class="box_img" src="../../images/car.png"></image> -->
       </view>
       <button class="btn" bindtap="goOwner">
         车主
@@ -12,8 +12,8 @@
     </view>
     <view class="btn_box">
       <view class="img_box">
-        <image class="box_bg" src="../../images/box_bg.png"></image>
-        <image class="box_img" src="../../images/user.png"></image>
+        <!-- <image class="box_bg" src="../../images/box_bg.png"></image>
+        <image class="box_img" src="../../images/user.png"></image> -->
       </view>
       <button class="btn" bindtap="goUser">
         乘客

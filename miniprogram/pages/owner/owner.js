@@ -44,8 +44,6 @@ Page({
         //console.log(res)
         const latitude = res.latitude
         const longitude = res.longitude
-        const speed = res.speed
-        const accuracy = res.accuracy
         //你地址解析
         qqmapsdk.reverseGeocoder({
           location: {
@@ -53,7 +51,7 @@ Page({
             longitude: longitude
           },
           success: function (res) {
-            //console.log(res)
+            console.log(res,self,'self')
             self.setData({
               latitude: latitude,
               longitude: longitude,
@@ -199,8 +197,8 @@ Page({
       latitude: data.latitude,
       longitude: data.longitude,
       iconPath: "/images/my_marker.png", //图标路径
-      width: 25,
-      height: 25
+      width: 40,
+      height: 40
     })
     this.setData({ //设置markers属性，将搜索结果显示在地图中
       markers: mks,

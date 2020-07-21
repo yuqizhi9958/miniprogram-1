@@ -44,7 +44,7 @@
         <cover-view class="placeholder" bindtap="showAddList">请输入您的店铺地址</cover-view>
       </cover-view>
    </cover-view>
-   <cover-view class="map-prompt">您可拖动地图, 标记店铺准确位置</cover-view>
+   <cover-view class="map-prompt">您可拖动地图, 标记您的准确位置</cover-view>
    <cover-image class="current-site-icon" src="../../images/my_marker.png"></cover-image>
    <cover-view class="reload" bindtap="reload">
       <cover-view class="center1">

@@ -39,7 +39,7 @@ Page({
     });
     //定位
     wx.getLocation({
-      type: 'wgs84',
+      type: 'gcj02',
       success(res) {
         //console.log(res)
         const latitude = res.latitude
@@ -288,7 +288,8 @@ Page({
           selectedId: 0,
           centerData: sug[0],
           nearList: sug, 
-          suggestion: sug
+          suggestion: sug,
+          keyword: '房产小区'
         })
         self.addMarker(sug[0]);
       },

@@ -64,7 +64,7 @@ Page({
         });
       },
       fail(err) {
-        //console.log(err)
+        console.log(err)
         wx.hideLoading({});
         wx.showToast({
           title: '定位失败',
@@ -261,14 +261,16 @@ Page({
       title: '加载中'
     });
     // 调用接口
+    console.log(self.data.keyword,'self.data.keyword');
+    
     qqmapsdk.search({
       keyword: self.data.keyword,  //搜索关键词
       //boundary: 'nearby(' + self.data.latitude + ', ' + self.data.longitude + ', 1000, 16)',
       location: self.data.latitude + ',' + self.data.longitude,
-      page_size: 20,
+      page_size: 10,
       page_index: 1,
       success: function (res) { //搜索成功后的回调
-        //console.log(res.data)
+        console.log(res.data)
         var sug = [];
         for (var i = 0; i < res.data.length; i++) {
           sug.push({ // 获取返回结果，放到sug数组中
@@ -519,6 +521,7 @@ Page({
     prevPage.setData({
       storeAddress: this.data.centerData.title
     })
+    console.log(prevPage,'prevPage');
     wx.navigateBack({
       delta: 1
     })

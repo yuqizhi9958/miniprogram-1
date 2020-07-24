@@ -3,11 +3,11 @@
 <!--绑定输入事件-->
 <view wx:if="{{addListShow}}">
 <view class="top">
-  <view class="back iconfont icon-fanhui" bindtap="back1"></view>
+  <view class="backback iconfont icon-fanhui" bindtap="back1"></view>
   <view class="search-box {{addListShow?'search-box1':''}}">
     <view class="region" bindtap="chooseCity">{{currentRegion.district}}</view>
     <view class="shu"></view>
-    <input bindinput="getsuggest" placeholder="请输入您的店铺地址"></input>
+    <input bindinput="getsuggest" placeholder="请输入您的地址"></input>
   </view>
 </view>
 <!--关键词输入提示列表渲染-->
@@ -35,16 +35,16 @@
    longitude="{{longitude}}"
    latitude="{{latitude}}" scale="17" bindregionchange="mapChange">
    <cover-view class="top">
-      <cover-view class="back" bindtap="back1">
+      <!-- <cover-view class="back" bindtap="back1">
         <cover-image src="../../images/back.png"></cover-image>
-      </cover-view>
+      </cover-view> -->
       <cover-view class="search-box">
         <cover-view class="region" bindtap="chooseCity">{{currentRegion.district}}</cover-view>
         <cover-view class="shu"></cover-view>
-        <cover-view class="placeholder" bindtap="showAddList">请输入您的店铺地址</cover-view>
+        <cover-view class="placeholder" bindtap="showAddList">请输入您的地址</cover-view>
       </cover-view>
    </cover-view>
-   <cover-view class="map-prompt">您可拖动地图, 标记您的准确位置</cover-view>
+   <!-- <cover-view class="map-prompt">您可拖动地图, 标记您的准确位置</cover-view> -->
    <cover-image class="current-site-icon" src="../../images/my_marker.png"></cover-image>
    <cover-view class="reload" bindtap="reload">
       <cover-view class="center1">

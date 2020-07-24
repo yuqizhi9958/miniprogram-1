@@ -12,6 +12,11 @@
   z-index: 999;
   overflow: hidden;
 }
+.backback {
+  position: absolute;
+  top: 30rpx;
+  left: 11rpx;
+}
 .back {
   width: 80rpx;
   height: 80rpx;
@@ -30,12 +35,12 @@
   margin-top: 15rpx;
 }
 .search-box {
-  width: 610rpx;
+  width: 660rpx;
   height: 80rpx;
   line-height: 80rpx;
   border-radius: 40rpx;
   background: rgb(255,255,255);
-  margin-left: 20rpx;
+  margin-left: 44rpx;
   float: left;
   overflow: hidden;
 }
@@ -125,7 +130,7 @@
   transform: translate(-50%,-50%);
 }
 .near-list {
-  height: 650rpx;
+  height: calc(100vh - 300px);
   padding-bottom: 100rpx;
   box-sizing: border-box;
 }
@@ -176,8 +181,8 @@
 }
 .bottom-box button{
   width: 100%;
-  height: 80rpx;
-  line-height: 80rpx;
+  /* height: 80rpx; */
+  /* line-height: 80rpx; */
   border: none;
   background: #3095F9;
   color: #fff;
@@ -324,6 +329,7 @@
  
 .icon-fanhui:before {
   content: "\e60d";
+  font-size: 50rpx;
 }
  
 .icon-iconfront-:before {

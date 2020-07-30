@@ -1,1 +1,63 @@
-/* miniprogram/pages/owner.wxss */
+.page_box {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  background-color: #000671;
+  padding: 80rpx 50rpx 0rpx 50rpx;
+}
+.main_box {
+  height: 70vh;
+  background-color: #fff;
+  padding: 40rpx;
+  border-radius: 40rpx;
+}
+.warn_box {
+  height: 108rpx;
+  display: flex;
+  align-items: center;
+}
+.input_box {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #EEEEEE;
+}
+.car_box {
+  border-bottom: none;
+}
+.get_code {
+  color: #2547F4 !important;
+  font-size: 28rpx;
+}
+.input_box .position {
+  height: 40rpx;
+  width: 30rpx;
+}
+.input_box .title {
+  color: #4A5A7F;
+}
+.input_box input {
+  color: #4A5A7F;
+  font-size: 28rpx;
+}
+.warn_box .warn {
+  height: 34rpx;
+  width: 34rpx;
+}
+.title {
+  margin-left: 10rpx;
+  font-size: 28rpx;
+  line-height: 0rpx;
+  color: #FD757C;
+}
+.btn_box {
+  width: 100%;
+  margin-top: 40rpx;
+}
+.btn_box button {
+  width: 100%;
+  border-radius: 40rpx;
+  background:rgba(37,71,244,1);
+  color: #fff;
+}

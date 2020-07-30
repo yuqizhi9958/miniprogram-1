@@ -5,7 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      userName:'',
+      idCard:'',
+      telPhone:'',
+      code:'',
+      start:'始发地',
+      end:'目的地',
+      plate:''
   },
 
   /**
@@ -62,5 +68,23 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  goPage(e){
+    console.log(e,'e');
+    let id = e.currentTarget.dataset.type
+    wx.navigateTo({
+      url: '/pages/map/map?id='+id,
+    })
+  },
+  submit(){
+    console.log(this.data);
+    
+  },
+  nameInput(e){
+    var value = e.detail.value;
+    let target = e.target.dataset.id
+    this.setData({
+      [target]: value
+    })
   }
 })

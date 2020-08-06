@@ -7,6 +7,47 @@
         所有数据都会进行加密处理
         </text>
 			</view>
+			<view class="input_box plate_main">
+			<view class="LP">
+    <!-- 输入框 -->
+    <view class="LP-inputBox">
+        <!-- 输入 -->
+        <view class='LP-input' data-status="1" bindtap='getFocus'>
+            <block wx:for="{{inputValue}}" wx:key="item">
+                <view data-index="{{index}}" class="{{index==activeIndex?'LP-input-active':''}} 'LP-input-Seventh' ">{{item.a}}</view>
+            </block>
+        </view>
+    </view>
+    <!-- 键盘 -->
+    <view class="LP-keyboard-box" animation="{{animationData}}" wx:if="{{keyboardStatus}}">
+        <view class='LP-keyboard-close'>
+            <view data-status="0" bindtap='getFocus'>关闭</view>
+        </view>
+        <view class="LP-box">
+            <view class='LP-keyboard-contents'>
+
+                <block wx:if="{{province}}"  >
+                    <view wx:for="{{keyboard.province}}" wx:key="index">
+                        <view class="LP-keyboard-key" hover-class='LP-keyboard-key-active' bindtap='province' wx:for="{{item}}" wx:key="index" data-sh="{{item}}">{{item}}</view>
+                    </view>
+                </block>
+
+                <block wx:if="{{numericAlphabet}}" >
+                    <view wx:for="{{keyboard.numLetter}}" wx:key="index">
+                        <view class="LP-keyboard-key" hover-class='LP-keyboard-key-active' bindtap='numberLetter' wx:for="{{item}}" wx:key="index" data-ot="{{item}}">{{item}}</view>
+<!-- 
+                        <view class="LP-keyboard-key-ok" hover-class='LP-keyboard-key-active' wx:if="{{index==3}}"  bindtap='okKeyboard'>查询</view> -->
+                        <view class="LP-keyboard-key-del" hover-class='LP-keyboard-key-active' wx:if="{{index==3}}" bindtap='delKeyboard'>删除</view>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+</view>
+			</view>
+			<view class="plate_title">
+				<text>车牌号</text>
+			</view>
 			<view class="input_box">
 				<input bindinput="nameInput" data-id="userName" value="{{userName}}" placeholder-style="color:#D0D4DD;" placeholder="请输入您的姓名"></input>
 				<text class="title">
@@ -35,9 +76,15 @@
 				<text class="get_code">{{start}}</text>
 				<image class="position" src="../../images/local.png"></image>
 			</view>
-			<view bindtap="goPage" data-type="end" class="input_box">
+			<!-- <view bindtap="goPage" data-type="end" class="input_box">
 				<text class="get_code">{{end}}</text>
 				<image class="position" src="../../images/local.png"></image>
+			</view> -->
+			<view class="input_box">
+				<input bindinput="nameInput" data-id="plate" value="{{plate}}" placeholder-style="color:#D0D4DD;" placeholder="请输入体温值"></input>
+				<text class="title">
+        °C
+        </text>
 			</view>
 			<view class="input_box car_box">
 				<input bindinput="nameInput" data-id="plate" value="{{plate}}" placeholder-style="color:#D0D4DD;" placeholder="请输入车牌号"></input>
@@ -45,13 +92,13 @@
         车牌号
         </text>
 			</view>
+
 		</view>
-		<view class="btn_box">
-			<button bindtap="submit">
+		<view class="btn_box add_box">
+				<image class="add_user" src="../../images/add.png"></image>
 				添加乘客信息
-			</button>
 		</view>
-		<view class="btn_box">
+		<view class="btn_box mb_20">
 			<button bindtap="submit">
 				提交
 			</button>

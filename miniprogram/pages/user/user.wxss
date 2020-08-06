@@ -1,3 +1,6 @@
+page {
+  background-color: #000671;
+}
 .page_box {
   box-sizing: border-box;
   height: 100%;
@@ -6,7 +9,6 @@
   padding: 80rpx 50rpx 0rpx 50rpx;
 }
 .main_box {
-  height: 70vh;
   background-color: #fff;
   padding: 40rpx;
   border-radius: 40rpx;
@@ -61,3 +63,85 @@
   background:rgba(37,71,244,1);
   color: #fff;
 }
+.plate_box {
+  width:65rpx;
+  height:75rpx;
+  border: 2rpx solid #D0D4DD;
+  text-align: center;
+  border-radius: 8rpx;
+}
+.plate_main {
+  border-bottom: none;
+}
+.plate_title {
+  text-align: center;
+  color: #4A5A7F;
+  font-size: 28rpx;
+}
+.mb_20 {
+  margin-bottom: 40rpx;
+}
+.add_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:36rpx;
+  color: #fff;
+  padding: 20rpx 0;
+  border-radius: 20rpx;
+  border: 1px dashed rgba(255,255,255,0.5);
+}
+.add_user {
+  width:40rpx;
+  height:40rpx;
+  margin-right: 20rpx;
+}
+
+.LP{ width: 100%; display:flex; flex-direction:column; }
+/* 题目 */
+.LP-header{ margin:15rpx 0; height:56rpx; }
+.LP-header .LP-header-title{ color:#2c2c2c; line-height:56rpx; font-size:28rpx; }
+/* 模拟输入框 */
+.LP-inputBox{ width: 100%;display: flex;justify-content: space-around; }
+.LP-input{ width: 100%; display:flex; justify-content:space-between; }
+.LP-input>view{  width:65rpx; height:75rpx; text-align:center; line-height:75rpx; box-sizing:border-box; font-size: 30rpx;  border: 2rpx solid #D0D4DD;border-radius: 8rpx;}
+.LP-input>view:first-child,.LP-input>view.LP-input-Seventh:last-child{ margin-left:0; }
+.LP-input-active{ animation: LP-input-active 500ms ease-out infinite alternate; }
+@keyframes LP-input-active {
+    0% {
+        border:1px solid #FFA500;
+    }
+    100% {
+        border:1px solid #FAFAFA;
+    }
+}
+.LP-input-Seventh+view:last-child{ background:#f1fce7; }
+
+/* 新能源 */
+.LP-checkBox{ display:flex; justify-content:flex-end; margin-top:30rpx; }
+.LP-checkBox .checked{ margin-top:30rpx; margin-right:30rpx; }
+.LP-checked label{ display:flex; height:42rpx; line-height:42rpx; }
+.LP-checked label>view{ color:#2c2c2c; line-height:42rpx; font-size:28rpx; }
+
+/* 常用车牌 */
+.commonCarno { padding: 0 30rpx; font-size: 28rpx; color: #adadad;}
+.commonCarno .carnoList { display: flex; margin-top: 30rpx; align-items: center; }
+.commonCarno .carnoList .carno { padding: 10rpx 20rpx; border-radius: 30rpx; border: 1rpx solid #adadad; margin-right: 30rpx; color: #777; font-size: 22rpx;}
+.commonCarno .carnoList .carno:active { border: 1rpx solid #ff8b23; }
+.latestText { margin-right: 10rpx; line-height: 42rpx;height: 42rpx; }
+
+/* 确定按钮 */
+.LP-btn{  height:123rpx; line-height:123rpx; text-align:center; width:528rpx; margin:30rpx auto; background:#01a0e4; color:#fff; border-radius:45px; font-size:38rpx; }
+.LP-btn.LP-btn-active{ background:#7dbad4; }
+/* 模拟键盘 */
+.LP-keyboard-box{ position:fixed; left:0; bottom:0; width:100%; border-top:1px solid #ddd; background:#fff; z-index:99; }
+.LP-keyboard-close{ text-align:right; height:60rpx; line-height:60rpx; padding-right:20rpx; }
+.LP-keyboard-close>view{ width:100rpx; text-align:center; float:right; }
+.LP-keyboard-contents{ padding-bottom:20rpx; margin:0 auto; }
+.LP-keyboard-contents>view{ display:flex; flex-wrap:wrap; justify-content:center; }
+.LP-box{ display:flex;  }
+.LP-keyboard-key{ font-size:36rpx; height:70rpx; width:64rpx; line-height:70rpx; text-align:center; border:2rpx solid #ddd; margin:8rpx 4rpx; background-color:#fff; box-shadow:0rpx 4rpx 0 #ddd; border-radius:4px; box-sizing:border-box; }
+.LP-keyboard-key-ok{ width:90rpx; height:70rpx; line-height:70rpx; font-size:32rpx; text-align:center; background-color:#fff; border:2rpx solid #ddd; margin:5rpx;  box-shadow:0rpx 4rpx 0 #ddd; border-radius:4px; }
+.LP-keyboard-key-del{ width:90rpx; height:70rpx; line-height:70rpx; font-size:32rpx; text-align:center; background-color:#fff; border:2rpx solid #ddd; margin:5rpx;  box-shadow:0rpx 4rpx 0 #ddd; border-radius:4px; }
+
+.LP-keyboard-key-active{ background:#000671; color:#fff; box-shadow:none!important; }
